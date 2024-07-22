@@ -40,7 +40,6 @@ import com.sk89q.worldedit.function.mask.Mask;
 import com.sk89q.worldedit.function.operation.Operations;
 import com.sk89q.worldedit.function.visitor.RegionVisitor;
 import com.sk89q.worldedit.internal.annotation.Offset;
-import com.sk89q.worldedit.internal.annotation.RegistryType;
 import com.sk89q.worldedit.internal.command.CommandRegistrationHandler;
 import com.sk89q.worldedit.internal.command.CommandUtil;
 import com.sk89q.worldedit.internal.cui.ServerCUIHandler;
@@ -560,7 +559,6 @@ public class GeneralCommands {
     @CommandPermissions("worldedit.registry")
     public void registry(Actor actor,
                          @Arg(desc = "The registry to search through")
-                         @RegistryType
                             Registry<?> registry,
                          @ArgFlag(name = 'p', desc = "Page of results to return", def = "1")
                             int page,
