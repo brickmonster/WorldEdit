@@ -50,7 +50,7 @@ class SpongeEntity implements Entity {
     @Override
     public BaseEntity getState() {
         org.spongepowered.api.entity.Entity entity = entityRef.get();
-        if (entity == null || entity.vehicle().isPresent()) {
+        if (entity == null || entity.vehicle().isPresent() || entity.type().isTransient()) {
             return null;
         }
         EntityType entityType = EntityType.REGISTRY.get(entity.type().key(RegistryTypes.ENTITY_TYPE).asString());
